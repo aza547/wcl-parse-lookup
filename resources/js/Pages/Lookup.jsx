@@ -31,13 +31,15 @@ export default function Lookup({latestParse}) {
           <GearDisplay gear={latestParse.gear}/>
         </div>
         <div className="flex-col z-10 text-white">
+          <h1 className="font-extrabold underline">Character</h1>
           <div>{latestParse.characterName}</div>
           <div>{latestParse.server}</div>
           <div>{latestParse.spec}</div>
           <div>{ringText}</div>
           <br />
+          <h1 className="font-extrabold underline">Latest Parse</h1>
           <div>{latestParse.encounterName}</div>
-          <div style={{ color: percentileColor }} className="text-bold">{`${percentile}%`}</div>
+          <div style={{ color: percentileColor }} className="font-bold">{`${percentile}%`}</div>
           <div>
             🔗
             <a href={logUrl} className="text-blue-500 hover:underline">WCL Report</a>
