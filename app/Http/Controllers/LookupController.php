@@ -17,7 +17,7 @@ class LookupController extends Controller
     {
       $base = "https://www.warcraftlogs.com/v1/parses/character";
       $params = "includeCombatantInfo=true";
-      $apiKey = "9d6cd7fdb4c4997ecf6baf06f5dee488"; // Probably don't check this in.
+      $apiKey = ""; // Probably don't check this in.
 
       $apiResponse = Http::get("$base/$character/$realm/$region?$params&metric=$metric&api_key=$apiKey");
 
