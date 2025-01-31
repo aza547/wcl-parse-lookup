@@ -1,5 +1,6 @@
 import ParticleBackground from "../Components/ParticleBackground";
 import GearDisplay from "../Components/GearDisplay";
+import { Head } from "@inertiajs/react";
 
 export default function Lookup({ latestParse }) {
     const { reportID, fightID } = latestParse;
@@ -24,6 +25,7 @@ export default function Lookup({ latestParse }) {
 
     return (
         <>
+            <Head title="Parse and Recreation" />
             <ParticleBackground />
             <div className="flex items-center justify-center h-screen gap-20">
                 <div className="flex-col z-10 text-white">

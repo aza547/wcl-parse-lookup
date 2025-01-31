@@ -8,4 +8,6 @@ Route::get('/', function () {
     return Inertia::render('Home', []);
 });
 
-Route::get('/lookup/{region}/{realm}/{character}/{metric}', [LookupController::class, 'index']);
+Route::get('/lookup/{region}/{realm}/{character}/{metric}',
+    [LookupController::class, 'index']
+);
