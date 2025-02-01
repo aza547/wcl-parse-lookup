@@ -8,6 +8,8 @@
 - Install Laravel, PHP, Composer (I think Herd does all that for free) and Node.
 - Install Laravel dependencies: `composer install` - I think, not actually tested this before.
 - Install Node dependencies: `npm install`.
+- Create an env file: `cp .env.example .env`.
+- Generate a key: `php artisan key:generate`.
 - Start Laravel backend: `php artisan serve`.
 - Start React frontend: `npm run dev`.
 
