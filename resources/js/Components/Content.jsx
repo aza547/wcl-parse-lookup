@@ -52,7 +52,10 @@ export const Content = () => {
     const autoSuggestTheme = {
         container: "react-autosuggest__container",
         containerOpen: "react-autosuggest__container--open",
-        input: "react-autosuggest__input text-black",
+        input:
+            realm.length < 1 || isRealmValid // Only show a red border if they have started typing and not put a valid value in.
+                ? "react-autosuggest__input text-black"
+                : "react-autosuggest__input text-black border-red-500 border-2",
         inputOpen: "react-autosuggest__input--open",
         inputFocused: "react-autosuggest__input--focused",
         suggestionsContainer:

@@ -33,6 +33,10 @@ class LookupController extends Controller
 
       $latestParse = $apiData[0] ?? null;
 
+      if (!$latestParse) {
+        return Inertia::render('Error', []);
+      }
+
       return Inertia::render('Lookup', [
         'latestParse' => $latestParse, 
       ]);

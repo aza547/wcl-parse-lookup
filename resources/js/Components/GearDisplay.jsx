@@ -19,6 +19,10 @@ export const GearDisplay = ({ gear }) => {
             tooltipUrl += item.bonusIDs.join(":");
         }
 
+        // Bit of guessing here but this seems to work to render set bonuses in tooltips.
+        tooltipUrl += "&pcs=";
+        tooltipUrl += gear.map((item) => item.id).join(":");
+
         const highlightClassName =
             item.id === 228411
                 ? " border-4 animate-pulse duration-2000 border-yellow-500"
