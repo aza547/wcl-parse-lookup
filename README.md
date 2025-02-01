@@ -6,10 +6,11 @@
 # How To Run?
 - Update `$apiKey` in `LookupController.php` with a real API key.
 - Install Laravel, PHP, Composer (I think Herd does all that for free) and Node.
-- Install Laravel dependencies: `composer install` - I think, not actually tested this before.
-- Install Node dependencies: `npm install`.
-- Create an env file: `cp .env.example .env`.
-- Generate a key: `php artisan key:generate`.
+- Run some commands to setup the checkout:
+  - `composer install`
+  - `npm install`
+  - `composer run-script post-root-package-install`
+  - `composer run-script post-create-project-cmd`
 - Start Laravel backend: `php artisan serve`.
 - Start React frontend: `npm run dev`.
 
@@ -32,7 +33,7 @@
 | Display %ile   | Yes   |    |
 
 # Comments
-- I've never used Laravel or PHP before so I started with a starter kit: https://laravel.com/docs/11.x/starter-kits.
+- I've never used Laravel or PHP before so I started with a bootcamp: https://bootcamp.laravel.com/inertia/installation.
 - I was a bit overwhelmed by all the stuff that the startup guide created for me automatically. I've deleted some of the stuff I think is now unused, but might have missed some.
 - Deliberately put the request to the WCL API on the backend given the authenticated nature.
 - I grabbed some realms from the WoW API and hardcoded them for the sake of simplicity. Same reasoning for only adding US and EU regions.
